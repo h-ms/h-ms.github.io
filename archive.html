@@ -1,0 +1,36 @@
+---
+title: Archive
+permalink: archive/
+---
+
+<!-- Note the clever placement of opening and closing list tags, relative to the conditional statements -->
+
+<section id="archive">
+  <h3>Most recent posts</h3> <!-- This year's posts -->
+    {% for post in site.posts %}  <!-- loop through array of posts from newest to oldest: variable "post" only exists inside this loop! -->
+      {% unless post.next %} <!-- if there is no "next" post after the one being evaluated, skip the "else" clause -->
+        
+        <ul class="this">
+      {% else %}   <!-- capture the year and compare them; Liquid wiki recommends against "else" with "unless" -->
+        {% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
+        {% capture nyear %}{{ post.next.date | date: '%Y' }}{% endcapture %}
+        {% if year != nyear %}
+          </ul> <!-- close the list for this year if the next post is in another (later) year -->
+        
+  <h3>{{ post.date | date: '%Y' }}</h3> <!-- Start a new heading for last year's posts --> 
+  <ul class="past">
+    
+    {% endif %}  <!-- this closes the if year != nyear condition -->
+    {% endunless %} <!-- this closes the unless post.next condition -->
+    
+    <!-- Here come the actual list elements -->
+    <li><time>{{ post.date | date:"%d %b" }}</time><a href="{{ post.url }}">{{ post.title }}</a></li>
+    
+    {% endfor %}
+  </ul>
+</section>
+    
+    
+    
+    
+    

@@ -5,19 +5,26 @@
         <span class="prev">
             {% if paginator.previous_page == 1 %}
                 <a href="{{ site.baseurl }}" title="Previous Page">
-                    <span class="arrow">←</span> Newer Posts
+                  <span class="arrow"><i class="fa fa-arrow-left"></i></span> Newer Posts
                 </a>
             {% else %}
                 <a href="{{ site.baseurl }}page{{ paginator.previous_page }}/">
-                    <span class="arrow">←</span> Newer Posts
+                    <span class="arrow"><i class="fa fa-arrow-left"></i></span> Newer Posts
                 </a>
             {% endif %}
         </span>
     {% endif %}
+  
+  {% if jekyll.environment == "development" %}
+    <a href="http://h-ms-github-io-hugojmaas486530.codeanyapp.com:4000/archive"><i class="fa fa-archive"></i>Archive</a>
+  {% else %}
+    <a href="http://h-ms.github.io/archive"><i class="fa fa-archive"></i>Archive</a>
+  {% endif %}
+  
     {% if paginator.next_page %}
         <span class="next">
             <a href="{{ site.baseurl }}page{{ paginator.next_page }}/">
-                Older Posts <span class="arrow">→</span>
+                Older Posts <span class="arrow"><i class="fa fa-arrow-right"></i></span>
             </a>
         </span>
     {% endif %}
