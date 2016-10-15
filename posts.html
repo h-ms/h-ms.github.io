@@ -1,0 +1,28 @@
+---
+title: Dopetrope
+layout: default
+---
+	<body class="no-sidebar">
+
+		{% include nav.html %}
+
+		<!-- Main -->
+			<div id="main-wrapper">
+				<div class="container">
+
+					<!-- Content -->
+						<article class="box post">
+							<header>
+								<h2>The Blog</h2>
+							</header>
+							  <ul>
+							    {% for post in site.posts %}
+							    <li>
+										<a href=""><strong> {{ post.title }} </strong></a>
+										<p> {{ post.excerpt }} </p>
+									</li>
+							    {% endfor %}
+							  </ul>
+					  </article>
+				</div>
+			</div>
