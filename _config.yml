@@ -1,6 +1,8 @@
   # SITE CONFIGURATION
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "https://h-ms.github.io" # the base hostname & protocol for your site
+    
+
 
 # THEME-SPECIFIC CONFIGURATION
 theme_settings:
@@ -52,9 +54,9 @@ theme_settings:
       output: true
       permalink: /first/:path/
       thumbnail: /thumbnails/first.jpg
-
-  # Initalize global variable
+  
   current: first
+
   
   # Initialize corresponding description
   # There must be one tabbed spacing on the line after the > character.
