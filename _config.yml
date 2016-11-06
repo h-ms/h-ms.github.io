@@ -55,7 +55,7 @@ theme_settings:
       permalink: /first/:path/
       thumbnail: /thumbnails/first.jpg
   
-  current: first
+  current: "first"
 
   
   # Initialize corresponding description
