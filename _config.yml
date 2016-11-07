@@ -1,6 +1,8 @@
   # SITE CONFIGURATION
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://h-ms.github.io" # the base hostname & protocol for your site
+url: "http://h-ms-github-io-hugojmaas486530.codeanyapp.com"
+
+#url: "http://h-ms.github.io" # the base hostname & protocol for your site
     
 
 
@@ -48,20 +50,6 @@ theme_settings:
   disqus_shortname: "hugo_maas"
   katex: true # Enable if using math markup
 
-  # Collections
-  collections:
-    first:
-      output: true
-      permalink: /first/:path/
-      thumbnail: /thumbnails/first.jpg
-  
-  # Defaults
-  defaults:
-    -
-      current: first
-      curr_description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod'
-
-
   # Localization strings
   str_follow_on: "Follow on"
   str_rss_follow: "Follow RSS feed"
@@ -76,6 +64,20 @@ theme_settings:
 
   # Post navigation
   post_navigation: false
+
+
+# COLLECTIONS
+collections:
+  first_debate:
+    output: true
+    permalink: /first_debate/:path/
+    thumbnail: /thumbnails/first.jpg
+
+current: 'first_debate'
+description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod'
+
+
+
 
 # PAGINATION
 paginate: 5
