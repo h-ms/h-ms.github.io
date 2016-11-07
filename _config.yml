@@ -55,13 +55,12 @@ theme_settings:
       permalink: /first/:path/
       thumbnail: /thumbnails/first.jpg
   
-  current: "first"
+  # Defaults
+  defaults:
+    -
+      current: first
+      curr_description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod'
 
-  
-  # Initialize corresponding description
-  # There must be one tabbed spacing on the line after the > character.
-  curr_description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod'
-  
 
   # Localization strings
   str_follow_on: "Follow on"
