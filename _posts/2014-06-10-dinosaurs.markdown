@@ -48,3 +48,18 @@ header-img: "img/post-bg-01.jpg"
 <div class="equation" data-expr="\displaystyle x=\frac{1+y}{1+2z^2}"></div>
 {% endraw %}
 
+<div id="tester" style="width:600px;height:250px;"></div>
+
+<script>
+
+  TESTER = document.getElementById('tester'); // Instance from the HTML canvas
+  Plotly.plot( TESTER, [{ // Creating the TESTER element
+    x: [1, 2, 3, 4, 5], // The X and Y coordinates for the graph
+    y: [1, 2, 4, 8, 16] 
+    }], 
+    {margin: { t: 0 } } 
+    );
+
+</script>
+
+
