@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-source 'https://rubygems.org'
-gem 'github-pages', group: :jekyll_plugins
-=======
 source "https://rubygems.org"
 ruby RUBY_VERSION
 
@@ -26,4 +22,3 @@ gem "minima"
 # group :jekyll_plugins do
 #   gem "jekyll-github-metadata", "~> 1.0"
 # end
->>>>>>> boilerplate
